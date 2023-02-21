@@ -11,7 +11,7 @@ namespace ConsoleApp2
 
             NumberFormatInfo numberFormatInfo = new NumberFormatInfo()
             {
-                NumberDecimalSeparator = ".",
+                NumberDecimalSeparator = ".", //Дает нам конвертировать дробное число т.к "." он не видит, а видит только ",". 
             };
 
             double a = Convert.ToDouble(str,numberFormatInfo);
