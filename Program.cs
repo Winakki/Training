@@ -7,16 +7,19 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            string str = "1.9";
-
-            NumberFormatInfo numberFormatInfo = new NumberFormatInfo()
+            string str2 = "5,9fd";
+            double a;
+            bool s = double.TryParse(str2, out a);
+            if (s)
             {
-                NumberDecimalSeparator = ".", //Дает нам конвертировать дробное число т.к "." он не видит, а видит только ",". 
-            };
-
-            double a = Convert.ToDouble(str,numberFormatInfo);
-
-            Console.WriteLine(a);
+                Console.WriteLine("Все успешно = " + a);
+            }
+            else
+            {
+                Console.WriteLine("Не получилось");
+            }
+          
+           
         }
     }
 }
